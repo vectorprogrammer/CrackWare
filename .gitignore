@@ -1,32 +1,95 @@
-# Prerequisites
 *.d
-
-# Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
-
-# Precompiled Headers
 *.gch
 *.pch
-
-# Compiled Dynamic libraries
 *.so
 *.dylib
 *.dll
 
-# Fortran module files
 *.mod
 *.smod
 
-# Compiled Static libraries
 *.lai
 *.la
 *.a
 *.lib
 
-# Executables
 *.exe
 *.out
 *.app
+
+*.c
+*.cpp
+*.h
+*.hpp
+*.o
+*.obj
+*.exe
+*.dll
+
+*.js
+*.jsx
+*.ts
+*.tsx
+node_modules/
+
+*.rb
+*.gem
+*.bundle
+
+*.cs
+*.csproj
+*.sln
+*.dll
+*.exe
+
+*.pl
+*.pm
+*.pod
+*.t
+
+bin/
+obj/
+dist/
+out/
+
+.vscode/
+.idea/
+*.suo
+*.d
+*.slo
+*.lo
+*.o
+*.obj
+*.gch
+*.pch
+*.so
+*.dylib
+*.dll
+
+*.mod
+*.smod
+
+*.lai
+*.la
+*.a
+*.lib
+
+*.exe
+*.out
+*.app
+
+*.c
+*.cpp
+*.h
+*.hpp
+*.o
+*.obj
+*.exe
+*.dll
+
+*.js
+*.jsx
