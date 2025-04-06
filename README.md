@@ -1,2 +1,2 @@
 # CrackSploit
-A framework for cracking and exploitation
+A rust based framework for cracking and exploitation
