@@ -9,4 +9,4 @@ cracksploit -f destroy.sh
 cracksploit -f analysis.sh
 cracksploit -f forensic.rs
 ```
-Pls note that 
+Pls note that these tools need privilege escalation 
