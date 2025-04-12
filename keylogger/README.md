@@ -1,9 +1,10 @@
 # Keylogger
 
-A collection of keyloggers - programs that
-monitor keystrokes
+A keylogger and associated modules
 
 ```
 Example
-
+crackware -k data-collect.rs
+crackware -k keylogger.bin
+crackware -k disconnect.rs
 ```
