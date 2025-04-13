@@ -1,5 +1,5 @@
 # Precomputed Hash Tables
-These are series of pre computed hash tables similar but not rainbow tables as they are forged differently
+These are series of pre computed hash tables similar but not rainbow tables as they are forged by  sending a random string into a hash algorithim and puts the uncomputed passwords with the hashed passwords
 ```
 Example
 crackware -r --hash=sha256 3700adf1f25fab8202c1343c4b0b4e3fec706d57cad574086467b8b3ddf273ec
