@@ -10,5 +10,7 @@ crackware -r --hash=sha384 0fa76955abfa9dafd83facca8343a92aa09497f98101086611b0b
 crackware -r --hash=490c161444dcd7f4b3916833377c0a55
 #Output is 12345
 Example 3
-crackware -r --hashfile=sha384file db2a301927bc0fbe3d36f2739527be7b55a6937135ab0e1f99eb4f3e3c5450ccb3173d9322a077f3b091408e436596bd
+crackware -r --hashfile=sha512 b0b26dcc046f6bdb6a1d01289972096731707c26ed64c2fcd808090265a84b9a0c9b076c29f40fa2e030ac3bf892633c947423efda2135b0eb24f1a547d84984
+#output is ##jsk^7(KKsdjhfs#$@%^&bfdsjkdSDFDGD9234738293!#$%^^%$#*&^%##&*()$%$#)&%$#%%^&**!!#$#
 ```
+Note that this is not a dictionary wordlist, as very complicated password and their computed hash are stored.
