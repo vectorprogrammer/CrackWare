@@ -7,4 +7,4 @@ CrackWare is the next-generation password and malware framework, with modules th
 
 
 
-*Note* CrackWare is not designed for exploitation, threat-modeling, vulnerability scanning, but evil twin attack(wifi)  is covered in password cracking
+*Note* CrackWare is not designed for  threat modeling, vulnerability assessment or security auditing but the exploitation modules may help
