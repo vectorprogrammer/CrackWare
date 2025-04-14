@@ -1,5 +1,5 @@
 # Labs
-Labs are applications that have vulnerabilities, from easy to beginner.
+Labs are applications that have vulnerabilities, from easy to hard.
 ```
 Example
 crackware-labs activate databasenosql --easy
