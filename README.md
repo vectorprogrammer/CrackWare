@@ -7,4 +7,14 @@ CrackWare is the next-generation password and malware framework, with modules th
 
 The tools are divided to 6 categories: Mobile, Exploitation, Cracking, Post-Exploit, Wireless, Malware
 
+To initialize CrackWare: 
+```
+./CrackWare.sh
+```
+To start and stop CrackWare labs
+```
+crackware-labs.initialize
+crackware-labs stop
+```
+
 *Note* CrackWare is not designed for  threat modeling, vulnerability assessment or security auditing but the exploitation modules may help
