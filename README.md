@@ -48,3 +48,11 @@ CrackWare NewbieExploit attacks new members of an enterpruse or organisation who
 CrackWare Threat-Model are threat modeling tools. Category: Exploit
 # CrackWare Lateral 
 CrackWare Lateral use an infected computer to continue infect computers in a network. Category: Post-Exploit, Wireless
+# CrackWare DDoS 
+CrackWare DDoS is a distributed denial of service toolkit. Category: Exploit, Wireless
+# CrackWare Binary
+CrackWare Binary are binary exploitation and attack tools. Category: Exploit
+# CrackWare PtH
+CrackWare PtH use pass the hash methods that don't use decryption on hashes to attack
+# CrackWare MData 
+CrackWare VoIP attacks mobile networks, like IDD, voip, SMS, MMS and cellular data
