@@ -46,3 +46,5 @@ CrackWare Infared tools perform infared emulation to emulate infared waves that 
 CrackWare NewbieExploit attacks new members of an enterpruse or organisation who are mostly confused in an environment. Uses the BlueBot method but stays more secret as privelege escalation works only on senior members. Category: Exploit, Post-Exploit, Cracking
 # CrackWare Threat-Model
 CrackWare Threat-Model are threat modeling tools. Category: Exploit
+# CrackWare Lateral 
+CrackWare Lateral use an infected computer to continue infect computers in a network. Category: Post-Exploit, Wireless
