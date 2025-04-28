@@ -1,76 +1,67 @@
-# CrackWare
-A rust based framework for password cracking and malware analysis and packing 
+# Ciphashkill
+Ciphash kill are compressed tables of ciphers and hashes
+that are stored in a rainbow tables for hashes and phrases and letters
+for ciphers.
+```
+Example
+crackware --ciphash=cipher --AES 53616c7465645f5fea0cebfc1878c4f50b2d297bb9b164443ee152fe719b933d
+crackware --ciphash=hash --Whirlpool e35626d2706c6a68c89e9fae0edccfa458bf0a7546c5d796ce4f98f6762a211feea41015ad0dae43b9e829f65de7d3318eaa6b646f93e86bb6728f168f3b271d
+Output is helloguys 
+```
+Sometimes, multiple hashes are used, CrackWare requires specifications, using the hash-multiple parameter in input box
+```
+Example
+crackware --ciphash=hash-multiple --Whirlpool(in this example the whirlpool hash is used first, and then encrypted by sha3-256 again) --SHA3-256 60f97bca9232e8d47e248eeffb7665ea79422afa076348b9fc3aa677609ebdfe
+Comparing...
+Reversing SHA3-256...
+SHA3-256 Reversed: 90e73c08ea5f2bc77a6ba050aade50ee51d8824f19ab254a99a6ea1ea6500aca9300104f6a4531a003f8d018762bb7b94251f314ec7d3415d0b91440a6fa92b6
+Comparing...
+Reversing Whirlpool...
+Unhashed password: examplepassword
+```
+When a Cipher or Hash is unknown, decryption requires special methods
+```
+Example
+crackware --ciphash=unknown --identify 3f2390d0a7495de0ed6e994a2ddccbe2f0db351adf66812b262eb0498b18b5edfb6ca260c510900b1ba40fa91110b70317d7bd740bb71cd15cdd14b96d40582f
+Identifying...
+Calculating...
+Probability: Hash 99%, Cipher 1%
+128-character structure...
+Can possibly be SHA-512 or SHA3-512...
+SHA-512 output unknown
+SHA3-512: socanalyst12345
+```
+If a hash is ciphered, it needs to be decrypted via another parameter
 
-![image](https://github.com/user-attachments/assets/ef61090c-b6ad-43a8-8501-3da852719893)
+```
+Example
+crackware --ciphash=hashed-cipher --hash=sha1 --cipher=base64 c12042cbd926dfc3139b23be457f2861594f59f5
+Comparing...
+SHA1 Reversed: YmVlZi14c3MgaXMgcmVhbCBnb29k
+Comparing Ciphertext...
+Base64 Reversed: beef-xss is real good
+```
+Salts and Peppers can also be stripped from targeted hashes
 
-CrackWare is the next-generation password and malware framework, with modules that spread from low-level firmware injection to rapid password cracking for RemoteCodeExecution and anti forensic tools not to get caught by blue teams. CrackWare was inspired by tools like John the Ripper and Hashcat
+```
+crackware --ciphash=salt
+```
 
-The tools are divided to 4 categories: Exploitation, Cracking, Post-Exploit, Wireless
+```
+Example
+crackware --ciphash=cipher --all-use <cipher>
+```
+This is an example of all-use. It can only be used for ciphers
+ Reversed: beef-xss is real good
+```
+Salts and Peppers can also be stripped from targeted hashes
 
-CrackWare has 
+```
+crackware --ciphash=salt
+```
 
-# CrackWare Firmware
-CrackWare Firmware are firmware attack tools. Category: Exploit, Post-Exploit
-# CrackWare Tables
-CrackWare Tables are rainbow tables that consist of both easy and complex reduction capabilities. Category: Cracking
-# CrackWare BankHack
-CrackWare BankHack tests vulnerabilities in banks and are capable of erasing money footprints and draining.Category: Exploit, Post-Exploit, Cracking
-# CrackWare Games
-CrackWare Games try to perform game server exploitation and post-exploitation: Category: Exploit, Post-Exploit, Cracking
-# CrackWare Bluetooth
-CrackWare Bluetooth perform BlueTooth attacks. Category: Wireless, Cracking
-# CrackWare Evil-Twin
-CrackWare Evil Twin are tools that emulate routers and perform an Evil Twin Attack. Category: Wireless, Cracking
-# CrackWare Radio
-CrackWare Radio perform SDR and RFID hacking. Category: Wireless, Exploit
-# CrackWare Remote-Code-Execution
-CrackWare Remote-Code-Execution executes rce attacks. Category: Post-Exploit
-# CrackWare Stegonagraphy
-CrackWare Steganography perform stego encryption either offensively or anti-forensics. Category: Cracking
-# CrackWare BlueBots
-CrackWare BlueBots are for red teamers. BlueBots contain a wordlist and a code. They attack a target blue teamer or other defensive members and perform a dictionary attack on a defensive. The defensive bot is under BlueBot's control and uses the defenders to further compromise the defenders or to perform an interior penetration test from within. Category: Exploit, Post-Exploit, Cracking
-# CrackWare Infared
-CrackWare Infared tools perform infared emulation to emulate infared waves that confuse MCU chips. Category: Wireless
-# CrackWare NewbieExploit
-CrackWare NewbieExploit attacks new members of an enterpruse or organisation who are mostly confused in an environment. Uses the BlueBot method but stays more secret as privelege escalation works only on senior members. Category: Exploit, Post-Exploit, Cracking
-# CrackWare Threat-Model
-CrackWare Threat-Model are threat modeling tools. Category: Exploit
-# CrackWare Lateral 
-CrackWare Lateral use an infected computer to continue infect computers in a network. Category: Post-Exploit, Wireless
-# CrackWare DDoS 
-CrackWare DDoS is a distributed denial of service toolkit. Category: Exploit, Wireless
-# CrackWare Binary
-CrackWare Binary are binary exploitation and attack tools. Category: Exploit
-# CrackWare PtH
-CrackWare PtH use pass the hash methods that don't use decryption on hashes to attack. Category: Cracking
-# CrackWare MData 
-CrackWare VoIP attacks mobile networks, like IDD, voip, SMS, MMS and cellular data. Category: Wireless, Cracking
-# CrackWare Auditor
-CrackWare Auditor performs code auditing and generates weakness reports to see if the audited code matches a CVE in order to exploit a potential weakness. Category: Exploit
-# CrackWare Loopback
-CrackWare Loopback use feeded hashes and use the cracked hashes to combine them into passwords. Category: Cracking
-# CrackWare Fingerprint
-CrackWare Fingerprint take known passwords and modify parts of the passwords. Category: Cracking
-# CrackWare Biometrics
-CrackWare Biometrics attack biometrics on IoT systems and scan a fingerprint to beam back into a file. Category: Cracking, Exploit
-# CrackWare Hybrid-Crack
-CrackWare Hybrid-Crack use different password cracking methods and hybridises. Category: Cracking
-# CrackWare Purple-rain
-CrackWare Purple-rain executes purple rain attacks. Category: Cracking
-# CrackWare Keylogger
-CrackWare Keylogger is a keylogger that is antivirus-undetectable and is a worm. Category: Exploit, Post-Exploit
-# CrackWare Samples
-CrackWare Samples are a hexed collection of malware and a malware-capturing tool for red teamers. Category: Exploit, Wireless
-# CrackWare OSINT
-CrackWare OSINT execute OSINT analysis for taking data(may contain APIs). Category: Exploit, Cracking
-# CrackWare Injector
-CrackWare Injector is a code injector that injects binaries or code into a targeted machine. Category: Cracking, Exploit 
-# CrackWare API
-CrackWare API attacks APIs in a network or local. Category: Wireless, Exploit, Post-Exploit
-# CrackWare PurpleBot
-CrackWare PurpleBot strike purple teams using similar concepts to BlueBots. Category: Exploit, Wireless 
-# CrackWare YellowBot
-CrackWare YellowBot attacks yellow teams like PurpleBots and BlueBots.
-# CrackWare AI
-# CrackWare Wireless-Radio
-CrackWare Wireless-Radio use pre-attacked devices on wireless assaults to attack radios. Category: Wireless, Post-Exploit
+```    
+Example
+crackware --ciphash=cipher --all-use <cipher>
+```
+This is an example of all-use. It can only be used for ciphers
