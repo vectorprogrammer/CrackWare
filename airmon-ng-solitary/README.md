@@ -1,5 +1,5 @@
 # Airmon NG Solitary
-This is the source code of airmon-ng, the monitor mode control tool by the Aircrack-NG Community. ForbiddenExploits does not take responsibility for airmon-ng integrated, as airmon-ng is done by
+This is the source code of airmon-ng, the monitor mode control tool by the Aircrack-NG Community. OrcaExploits does not take responsibility for airmon-ng integrated, as airmon-ng is done by
 aircarck-ng.
 How to use:
 ```
